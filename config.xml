@@ -6,8 +6,13 @@
   <numExecutors>2</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
-  <authorizationStrategy class="hudson.security.FullControlOnceLoggedInAuthorizationStrategy">
-    <denyAnonymousReadAccess>true</denyAnonymousReadAccess>
+  <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
+    <permission>hudson.model.Hudson.Administer:ananda</permission>
+    <permission>hudson.model.Hudson.Read:kiran</permission>
+    <permission>hudson.model.Item.Read:kiran</permission>
+    <permission>hudson.model.View.Create:kiran</permission>
+    <permission>hudson.model.View.Read:kiran</permission>
+    <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Reserve:kiran</permission>
   </authorizationStrategy>
   <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
     <disableSignup>true</disableSignup>
@@ -37,7 +42,7 @@
   <slaveAgentPort>-1</slaveAgentPort>
   <label></label>
   <crumbIssuer class="hudson.security.csrf.DefaultCrumbIssuer">
-    <excludeClientIPFromCrumb>false</excludeClientIPFromCrumb>
+    <excludeClientIPFromCrumb>true</excludeClientIPFromCrumb>
   </crumbIssuer>
   <nodeProperties/>
   <globalNodeProperties/>
