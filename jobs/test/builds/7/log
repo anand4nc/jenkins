@@ -1,0 +1,76 @@
+Started by user [8mha:////4Kk9vXEDKhpG3Z8JTvzcjHGxjf13vYuJXlzdFa+VorOJAAAAmB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAy2EgYe/dLi1CL9xLzEvJREAO9X4D7BAAAA[0mananda
+Running as SYSTEM
+Building on master in workspace /var/lib/jenkins/workspace/test
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/anand4nc/java-hello-world-with-maven.git # timeout=10
+Fetching upstream changes from https://github.com/anand4nc/java-hello-world-with-maven.git
+ > git --version # timeout=10
+ > git fetch --tags --progress -- https://github.com/anand4nc/java-hello-world-with-maven.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision fdb20bd5f3abbc8b63380f3e2312ffa71f337a13 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f fdb20bd5f3abbc8b63380f3e2312ffa71f337a13 # timeout=10
+Commit message: "update: doc"
+ > git rev-list --no-walk fdb20bd5f3abbc8b63380f3e2312ffa71f337a13 # timeout=10
+[test] $ /bin/sh -xe /tmp/jenkins7767620958640083464.sh
++ mvn clean deploy
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< org.springframework:jb-hello-world-maven >--------------
+[INFO] Building jb-hello-world-maven 0.1.0
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ jb-hello-world-maven ---
+[INFO] Deleting /var/lib/jenkins/workspace/test/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ jb-hello-world-maven ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/test/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ jb-hello-world-maven ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to /var/lib/jenkins/workspace/test/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ jb-hello-world-maven ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /var/lib/jenkins/workspace/test/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ jb-hello-world-maven ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ jb-hello-world-maven ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ jb-hello-world-maven ---
+[INFO] Building jar: /var/lib/jenkins/workspace/test/target/jb-hello-world-maven-0.1.0.jar
+[INFO] 
+[INFO] --- maven-shade-plugin:2.1:shade (default) @ jb-hello-world-maven ---
+[INFO] Including joda-time:joda-time:jar:2.2 in the shaded jar.
+[INFO] Replacing original artifact with shaded artifact.
+[INFO] Replacing /var/lib/jenkins/workspace/test/target/jb-hello-world-maven-0.1.0.jar with /var/lib/jenkins/workspace/test/target/jb-hello-world-maven-0.1.0-shaded.jar
+[INFO] Dependency-reduced POM written at: /var/lib/jenkins/workspace/test/dependency-reduced-pom.xml
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ jb-hello-world-maven ---
+[INFO] Installing /var/lib/jenkins/workspace/test/target/jb-hello-world-maven-0.1.0.jar to /var/lib/jenkins/.m2/repository/org/springframework/jb-hello-world-maven/0.1.0/jb-hello-world-maven-0.1.0.jar
+[INFO] Installing /var/lib/jenkins/workspace/test/dependency-reduced-pom.xml to /var/lib/jenkins/.m2/repository/org/springframework/jb-hello-world-maven/0.1.0/jb-hello-world-maven-0.1.0.pom
+[INFO] 
+[INFO] --- maven-deploy-plugin:2.7:deploy (default-deploy) @ jb-hello-world-maven ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 7.054 s
+[INFO] Finished at: 2020-01-15T02:21:36Z
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-deploy-plugin:2.7:deploy (default-deploy) on project jb-hello-world-maven: Deployment failed: repository element was not specified in the POM inside distributionManagement element or in -DaltDeploymentRepository=id::layout::url parameter -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

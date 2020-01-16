@@ -1,0 +1,21 @@
+Started by GitHub push by anand4nc
+Running as SYSTEM
+Building on master in workspace /var/lib/jenkins/workspace/test
+No credentials specified
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/anand4nc/myrepo.git # timeout=10
+Fetching upstream changes from https://github.com/anand4nc/myrepo.git
+ > git --version # timeout=10
+ > git fetch --tags --progress -- https://github.com/anand4nc/myrepo.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 0002e887c7b3890ff5bb6c3b3b504801b46c71ff (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 0002e887c7b3890ff5bb6c3b3b504801b46c71ff # timeout=10
+Commit message: "Update makefile"
+ > git rev-list --no-walk 0488b5bdbff5eaa129bbd1e9b4a5a0078f7eca1d # timeout=10
+[test] $ /bin/sh -xe /tmp/jenkins10310639272945061956.sh
++ make
+make: 'cprog.exe' is up to date.
+Finished: SUCCESS
