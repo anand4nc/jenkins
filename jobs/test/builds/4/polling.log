@@ -1,0 +1,11 @@
+Started on Jan 14, 2020, 2:38:35 PM
+Started by event from 192.30.252.98 ⇒ http://13.233.138.150:8080/github-webhook/ on Tue Jan 14 14:38:35 UTC 2020
+Using strategy: Default
+[poll] Last Built Revision: Revision 0488b5bdbff5eaa129bbd1e9b4a5a0078f7eca1d (refs/remotes/origin/master)
+No credentials specified
+ > git --version # timeout=10
+ > git ls-remote -h -- https://github.com/anand4nc/myrepo.git # timeout=10
+Found 1 remote heads on https://github.com/anand4nc/myrepo.git
+[poll] Latest remote head revision on refs/heads/master is: 0002e887c7b3890ff5bb6c3b3b504801b46c71ff
+Done. Took 0.65 sec
+Changes found
